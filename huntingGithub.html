@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#myButton').click(function(){
+
+				$.get("https://api.github.com/users/vangali12", displayName)
+
+				function displayName(data) {
+					var showVal = data['login'];
+					$('body').append(showVal);
+					console.log(data);
+				}
+
+			});
+			
+		})
+
+		
+	</script>
+</head>
+<body>
+	<input id="myButton" type="button" name="button" value="Click Me!">
+</body>
+</html>
+
+
+
+
+
